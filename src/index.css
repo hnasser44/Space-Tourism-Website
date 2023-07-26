@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+    max-width: 100%;
+    cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header nav, .mobile-menu {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
 }
+
+
+main {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+main.destination {
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
+}
+
+main.crew {
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
+}
+
+main.technology {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+ul li.active-link::after {
+    width: 100%;
+}
+
+
+
+@media (min-width: 640px) {
+    main {
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+
+    main.destination {
+        background-image: url(./assets/destination/background-destination-tablet.jpg);
+    }
+
+    main.crew {
+        background-image: url(./assets/crew/background-crew-tablet.jpg);
+    }
+
+    main.technology {
+        background-image: url(./assets/technology/background-technology-tablet.jpg);
+    }
+    
+}
+
+@media (min-width: 1224px) {
+    main {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
+
+    main.destination {
+        background-image: url(./assets/destination/background-destination-desktop.jpg);
+    }
+
+    main.crew {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
+    }
+
+    main.technology {
+        background-image: url(./assets/technology/background-technology-desktop.jpg);
+    }
+    
+}
+
+
+
+
+button.destination-selected::after {
+    width: 100%;
+}
+
