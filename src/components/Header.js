@@ -30,8 +30,8 @@ const Header = ({ newClass }) => {
   return (
     <>
       <div
-        className={`tablet:hidden z-10 mobile-menu fixed top-0 right-0 h-screen w-[254px] p-5 translate-x-full transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-[0%]" : ""
+        className={`tablet:hidden z-10 mobile-menu fixed top-0 right-0 h-screen w-[254px] p-5  translate-x-full transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : ""
         }`}
       >
         <img
@@ -44,6 +44,7 @@ const Header = ({ newClass }) => {
           {PageNames.map((pageName) => (
             <li
               key={pageName}
+              onClick={() => setIsMenuOpen(false)}
               className={`relative after:absolute after:block after:w-0 after:h-[2px] after:bg-white after:top-[120%] hover:after:w-full w-min after:transition-all after:duration-300 ${
                 handleActiveLink(pageName) ? "active-link" : ""
               }`}
