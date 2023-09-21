@@ -30,8 +30,8 @@ const Header = ({ newClass }) => {
   return (
     <>
       <div
-        className={`tablet:hidden z-10 mobile-menu fixed top-0 right-0 h-screen w-[254px] p-5  translate-x-full transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : ""
+        className={`tablet:hidden z-10 mobile-menu fixed top-0 right-0 h-screen w-[254px] p-5  transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : " translate-x-full"
         }`}
       >
         <img
